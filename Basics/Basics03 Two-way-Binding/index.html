@@ -18,10 +18,14 @@
     </header>
     <section id="events">
       <h2>Events in Action</h2>
-      <!-- v-on adiciona evento ao elemento -->
-      <button v-on:click="counterPlus()">Add</button>
-      <button v-on:click="counterReduce()">Reduce</button>
+      <!-- shortHand @ para v-on para v-bind  :value -->
+      <button @click="add(10)">Add 10</button>
+      <button v-on:click="reduce(5)">Subtract 5</button>
       <p>Result: {{ counter }}</p>
+      <input type="text" v-model="name">
+      <input type="text" v-model="lastName">
+      <p>Your Name: {{ fullname }}</p>
+      <button v-on:click="resetInput">Reset Input</button>
     </section>
   </body>
 </html>
